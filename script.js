@@ -1,6 +1,4 @@
-// script.js – Applies to all pages (index.html, admissions.html, tution.html, yoga.html, gallery.html, etc.)
-
-// Animate sections on scroll
+// ===== Scroll-triggered Animations =====
 const sections = document.querySelectorAll('section');
 const appearOnScroll = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
@@ -16,7 +14,7 @@ sections.forEach(section => {
   appearOnScroll.observe(section);
 });
 
-// Handle all forms with feedback
+// ===== Form Submission Alert =====
 const forms = document.querySelectorAll('form');
 forms.forEach(form => {
   form.addEventListener('submit', function(e) {
@@ -26,7 +24,7 @@ forms.forEach(form => {
   });
 });
 
-// Preload images to optimize UX
+// ===== Image Preloading =====
 function preloadImages(imagePaths) {
   imagePaths.forEach(src => {
     const img = new Image();
@@ -35,28 +33,60 @@ function preloadImages(imagePaths) {
 }
 
 preloadImages([
-  'assets/images/play-school.jpg',
-  'assets/images/kids-painting.jpg',
-  'assets/images/fun-games.jpg',
-  'assets/images/hero-bg.jpg',
-  'assets/images/story-time.jpg',
-  'assets/images/yoga-session.jpg',
-  'assets/images/language-activity.jpg',
-  'assets/images/music-time.jpg'
+  'assets/playschool.jpg',
+  'assets/gallery1.jpg',
+  'assets/gallery2.jpg',
+  'assets/gallery3.jpg',
+  'assets/gallery4.jpg',
+  'assets/gallery5.jpg',
+  'assets/yoga.jpg',
+  'assets/languages.jpg',
+  'assets/music.jpg'
 ]);
 
-// Optional: Scroll to top when navigating from card links (simulate smooth load)
-document.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+// ===== Smooth Scroll to Sections or Top =====
+document.querySelectorAll('a[href^="#"], .program-card').forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href');
+    if (targetId && targetId.startsWith('#')) {
+      e.preventDefault();
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 });
 
-// (Future enhancement) Mobile menu toggle logic
+// ===== Dark Mode Toggle =====
+const toggleButton = document.querySelector('.dark-toggle');
+if (toggleButton) {
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+  });
+}
+
+// ===== Back to Top Button =====
+const backToTopBtn = document.getElementById('backToTop');
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// ===== Mobile Navigation Toggle =====
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('nav');
-if (navToggle && nav) {
+const navMenu = document.querySelector('.nav-menu');
+
+if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    navMenu.classList.toggle('open');
   });
 }

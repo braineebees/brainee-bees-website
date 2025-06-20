@@ -2,89 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brainee Bees Academy | Where Young Minds Blossom</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brainee Bees Academy – Ignite Curiosity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- 🌙 Dark Mode Toggle -->
+  <button class="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+
+  <!-- ☰ Mobile Navigation -->
+  <nav class="mobile-nav">
+    <button class="nav-toggle">☰</button>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="tuitions.html">Tuitions</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="yoga.html">Yoga</a></li>
+      <li><a href="handwriting.html">Handwriting</a></li>
+    </ul>
+  </nav>
+
   <header class="hero-header">
     <div class="hero-content">
-      <h1>Welcome to Brainee Bees Academy</h1>
-      <p>Igniting Curiosity. Nurturing Brilliance. Building the Future.</p>
-      <a href="#programs" class="btn-hero">Explore Our Programs</a>
+      <h1 class="main-title">Welcome to Brainee Bees Academy</h1>
+      <p class="subtitle">Inspiring Wonder, Learning & Growth</p>
+      <a href="#programs" class="btn-hero">Explore Programs</a>
     </div>
   </header>
 
-  <main>
-    <section id="about">
-      <h2>Who We Are</h2>
-      <p>Brainee Bees Academy is a vibrant learning community offering world-class early childhood education in Chennai. From playful beginnings in our international playschool to focused skill-building in languages and arts, we nurture each child’s full potential.</p>
-    </section>
+  <section class="intro-block">
+    <h2>Where Every Child Shines</h2>
+    <p>Brainee Bees Academy nurtures young minds through creative play, personalized learning, and hands-on discovery. From early childhood education to enrichment programs like yoga, robotics, and language arts—we cultivate brilliance.</p>
+  </section>
 
-    <section id="programs">
-      <h2>Our Signature Programs</h2>
-      <div class="program-grid">
-        <a class="program-card" href="playschool.html">
-          <img src="assets/images/playschool.jpg" alt="Playschool" />
-          <div class="overlay">Playschool (2–5 Years)</div>
-        </a>
-        <a class="program-card" href="tuitions.html">
-          <img src="assets/images/tuitions.jpg" alt="Tuitions" />
-          <div class="overlay">Tuitions (KG–Grade 8)</div>
-        </a>
-        <a class="program-card" href="languages.html">
-          <img src="assets/images/languages.jpg" alt="Languages" />
-          <div class="overlay">Spoken English, Japanese & Hindi</div>
-        </a>
-        <a class="program-card" href="yoga.html">
-          <img src="assets/images/yoga.jpg" alt="Yoga for kids" />
-          <div class="overlay">Yoga & Mindfulness</div>
-        </a>
-        <a class="program-card" href="handwriting.html">
-          <img src="assets/images/handwriting.jpg" alt="Handwriting" />
-          <div class="overlay">Creative Handwriting</div>
-        </a>
-      </div>
-    </section>
+  <section class="highlights">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>🌟 Small student-teacher ratio</li>
+      <li>🌍 Global language exposure – Japanese, English, Hindi</li>
+      <li>🎨 Hands-on art and sensory play labs</li>
+      <li>🧠 Cognitive games to boost memory and logic</li>
+      <li>🌱 Nature and outdoor exploration time</li>
+      <li>🤖 Kids-friendly tech zone with intro to robotics</li>
+      <li>🎭 Creative expression through music and drama</li>
+      <li>📚 Guided reading sessions and story time corners</li>
+      <li>👪 Parent engagement workshops</li>
+      <li>🍎 Healthy meals and nutrition lessons</li>
+    </ul>
+  </section>
 
-    <section id="feature-video">
-      <h2>A Peek Inside Our Playful World</h2>
-      <div class="feature-video">
-        <video width="90%" controls>
-          <source src="assets/videos/intro.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+  <section class="feature-video">
+    <h2>Watch Our Journey</h2>
+    <video controls width="80%">
+      <source src="assets/intro-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
 
-    <section id="testimonials">
-      <h2>What Parents Say</h2>
-      <blockquote>“Brainee Bees isn't just a school – it’s a second home filled with joy, care, and growth!”</blockquote>
-      <blockquote>“The programs are so thoughtfully crafted. My child has grown confident and expressive.”</blockquote>
-    </section>
+  <section id="programs" class="program-section">
+    <h2>Our Programs</h2>
+    <div class="program-grid">
+      <a href="playschool.html" class="program-card">
+        <img src="assets/playschool.jpg" alt="Playschool">
+        <div class="overlay"><h3>Playschool</h3></div>
+      </a>
+      <a href="tuitions.html" class="program-card">
+        <img src="assets/tuitions.jpg" alt="Tuitions">
+        <div class="overlay"><h3>Tuitions</h3></div>
+      </a>
+      <a href="yoga.html" class="program-card">
+        <img src="assets/yoga.jpg" alt="Yoga">
+        <div class="overlay"><h3>Yoga for Kids</h3></div>
+      </a>
+      <a href="handwriting.html" class="program-card">
+        <img src="assets/handwriting.jpg" alt="Handwriting">
+        <div class="overlay"><h3>Handwriting Classes</h3></div>
+      </a>
+      <a href="languages.html" class="program-card">
+        <img src="assets/languages.jpg" alt="Languages">
+        <div class="overlay"><h3>Spoken English, Japanese, Hindi</h3></div>
+      </a>
+      <a href="robotics.html" class="program-card">
+        <img src="assets/robotics.jpg" alt="Robotics">
+        <div class="overlay"><h3>Kids Robotics</h3></div>
+      </a>
+      <a href="music.html" class="program-card">
+        <img src="assets/music.jpg" alt="Music">
+        <div class="overlay"><h3>Music & Movement</h3></div>
+      </a>
+      <a href="storytelling.html" class="program-card">
+        <img src="assets/storytelling.jpg" alt="Storytelling">
+        <div class="overlay"><h3>Storytelling & Theater</h3></div>
+      </a>
+      <a href="stem.html" class="program-card">
+        <img src="assets/stem.jpg" alt="STEM">
+        <div class="overlay"><h3>STEM Exploration</h3></div>
+      </a>
+      <a href="fieldtrips.html" class="program-card">
+        <img src="assets/fieldtrip.jpg" alt="Field Trips">
+        <div class="overlay"><h3>Field Trips & Nature Walks</h3></div>
+      </a>
+    </div>
+  </section>
 
-    <section id="contact">
-      <h2>Contact & Admissions</h2>
-      <form>
-        <input type="text" placeholder="Parent's Name" required />
-        <input type="text" placeholder="Child's Name & Age" required />
-        <input type="email" placeholder="Email Address" required />
-        <textarea placeholder="Tell us more or ask a question..." rows="4"></textarea>
-        <button type="submit">Submit Enquiry</button>
-      </form>
-    </section>
-  </main>
+  <section class="mission-vision">
+    <div class="mission">
+      <h2>Our Mission</h2>
+      <p>To build a foundation of curiosity, confidence, and lifelong learning for every child.</p>
+    </div>
+    <div class="vision">
+      <h2>Our Vision</h2>
+      <p>To become the most inspiring and innovative children’s learning center in India.</p>
+    </div>
+  </section>
+
+  <section class="testimonial-block">
+    <h2>What Parents Say</h2>
+    <blockquote>“My daughter absolutely loves her teachers and the activities. She learns something new every day!” — Meena K., Parent</blockquote>
+    <blockquote>“One of the best decisions we made was choosing Brainee Bees. The programs are so unique and fun.” — Rajesh S., Parent</blockquote>
+    <blockquote>“The robotics and STEM activities really sparked my son's imagination. Highly recommend!” — Swathi D., Parent</blockquote>
+  </section>
+
+  <section class="gallery">
+    <h2>Inside Our Campus</h2>
+    <div class="gallery-row">
+      <img src="assets/gallery1.jpg" alt="Activity Room">
+      <img src="assets/gallery2.jpg" alt="Outdoor Play">
+      <img src="assets/gallery3.jpg" alt="Learning Time">
+      <img src="assets/gallery4.jpg" alt="Art Studio">
+      <img src="assets/gallery5.jpg" alt="Tech Lab">
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Brainee Bees</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Phone Number" required>
+      <textarea placeholder="Your Message..." rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p class="visit-text">Visit us at: <strong>Eluthukaran Street, Kaladipet, Chennai - 600019</strong></p>
+  </section>
 
   <footer class="footer">
-    <p>© 2025 Brainee Bees Academy, Chennai</p>
-    <div class="social">
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">YouTube</a>
+    <div class="footer-content">
+      <p>© 2025 Brainee Bees Academy | Chennai, India | All rights reserved.</p>
+      <div class="social">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">YouTube</a>
+      </div>
     </div>
   </footer>
 
+  <!-- 🔝 Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <!-- Scripts -->
   <script src="script.js"></script>
 </body>
 </html>
