@@ -1,138 +1,169 @@
-/* General Reset */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(to right, #fefcea, #f1daff);
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
-/* Canvas Background */
-canvas#bg-canvas {
-  position: fixed;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff5ec;
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.navbar .logo {
+  font-size: 1.6rem;
+  color: #ff7b54;
+}
+.navbar nav a {
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+.navbar nav a:hover {
+  color: #d03b39;
 }
 
 /* Hero Section */
-body, html {
-  height: 100%;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f7f7f7;
-  overflow-x: hidden;
-}
-
 .hero {
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: white;
-  padding: 0 20px;
+  padding: 100px 20px;
+  background: url('assets/hero-bg.png') no-repeat center/cover;
+  color: #fff;
+  background-blend-mode: overlay;
 }
-
-.hero h1 {
+.hero h2 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
-
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
 }
-
 .btn {
+  background: #ff9a8b;
+  color: #fff;
   padding: 12px 24px;
-  background: #ff9800;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
   transition: background 0.3s ease;
 }
 .btn:hover {
-  background: #e68900;
+  background: #ff6f61;
 }
 
-/* Section Styling */
+/* Sections */
 section {
   padding: 60px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
-  position: relative;
-  z-index: 1;
 }
-
 section h2 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
   text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #ff6f61;
+}
+.programs ul {
+  list-style: none;
+  padding: 0;
+}
+.programs li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
 }
 
-/* Forms */
+.about blockquote {
+  font-style: italic;
+  margin-top: 20px;
+  color: #666;
+  padding-left: 20px;
+  border-left: 3px solid #ff6f61;
+}
+
 form {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin: auto;
-  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
-
-form input, form textarea {
-  padding: 12px;
+form input, form textarea, form button {
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  resize: vertical;
-}
-
-form button {
   padding: 12px;
-  background: #4CAF50;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+form button {
+  background: #5ac8fa;
   color: white;
   border: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+  transition: background 0.3s ease;
 }
 form button:hover {
-  background: #388e3c;
+  background: #007aff;
 }
 
-/* Gallery */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+.map h3 {
+  margin-top: 30px;
+  font-size: 1.2rem;
 }
-.gallery img {
-  max-width: 280px;
+
+.footer {
+  text-align: center;
+  background: #ffeadb;
+  padding: 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+/* Animated background placeholder */
+.animated-bg {
+  position: fixed;
   width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 20%, #ffe0f0, transparent 40%),
+              radial-gradient(circle at 80% 40%, #dff9fb, transparent 40%),
+              radial-gradient(circle at 50% 80%, #c3f584, transparent 40%);
+  animation: floatbg 30s infinite alternate;
 }
 
-/* Responsive Adjustments */
+@keyframes floatbg {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50px); }
+}
+
 @media (max-width: 768px) {
-  .hero h1 {
+  .hero h2 {
     font-size: 2rem;
   }
-
-  .hero p {
-    font-size: 1rem;
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  .gallery img {
-    max-width: 90%;
+  .navbar nav a {
+    margin: 10px 0;
   }
 }
